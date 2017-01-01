@@ -45,7 +45,7 @@ who receives or downloads a Python program
 can actually check that the program does what
 is supposed to do, **and nothing more**
 (unlike closed-source programs,
-which sends personal information to third parties,
+which send personal information to third parties,
 show you advertisements, or
 damage your computer).
 
@@ -353,7 +353,7 @@ and prints them on the prompt or exports them to an output file.
 
 First, download the source code of the Python program you want to run.
 
-This usually implies **downloading** either ***a single Python source code** file
+This usually implies **downloading** either **a single Python source code** file
 (with extension ``.py``), or **a ZIP file containing several Python source code files**
 and other resource files that you need to uncompress somewhere on your disk.
 
