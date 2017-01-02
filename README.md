@@ -30,10 +30,10 @@ high-level, general-purpose **programming language**
 which allows people to easily create and share programs
 for a variety of applications.
 
-The Python project is a free (libre) software/open source (FLOSS) initiative,
+The Python project is a free (libre)/open source software (FLOSS) initiative,
 managed by the [Python Software Foundation](https://www.python.org/psf-landing/).
 You can download, install, and use Python **for free**
-on a variety of platforms,
+on several platforms,
 including Linux, Mac OS X, and Windows computers.
 
 Python enables the development of FLOSS programs,
@@ -54,7 +54,7 @@ More details on Python can be found on the
 and on its
 [Wikipedia page](https://en.wikipedia.org/wiki/Python_(programming_language)).
 
-In practice, to use a Python program you need two pieces:
+In practice, to use a Python program you need two pieces of software:
 
 * the **Python interpreter**, which is the "master" program
   that reads the source code of a Python program,
@@ -73,7 +73,7 @@ with a complete, real-life example.
 ## Installing Python On Windows
 
 The preliminary step consists in installing
-the Python interpreter ("master program")
+the Python interpreter (i.e., the "master program")
 on your computer.
 
 ### Step 0: Should I Get Python 2 Or Python 3?
@@ -85,19 +85,20 @@ there are two main versions of Python:
 Discussing the technical differences between these two versions
 is beyond the scope of this guide.
 It suffices to say that
-some Python program work in both versions of Python,
-while others work only on Python 2 but not on Python 3,
+some Python programs work with both versions of Python,
+while other Python programs work only
+with Python 2 but not with Python 3,
 or vice versa.
 
 **You should get the version of Python that the program
 you are interested in recommends.**
 If the latter does not specify a version,
 get the latest Python 3 version available.
-(If you later discover that your Python program
+If you later discover that your Python program
 does not work with the Python version you installed,
-do not worry: just uninstall it, and install the other one!)
+do not worry: just uninstall it, and install the other one!
 
-In the rest of the guide we assume to want to install Python 3.
+In the rest of the guide we assume you need **Python 3**.
 
 ### Step 1: Download The Installer
 
@@ -106,7 +107,7 @@ go to [https://python.org/](https://python.org/):
 
 ![Python home page](imgs/010_pythonorg.png)
 
-Click on the **Download > Latest > Python 3.6.0** link.
+Click on the **Download > Latest Python 3.6.0** link.
 
 You will get a page listing all the new features of Python 3.6.0:
 
@@ -117,17 +118,19 @@ Scroll down until you see the list of available downloads:
 ![Python 3.6.0 downloads](imgs/021_download.png)
 
 If you have a recent Windows computer,
-very probably it is a 64-bit machine,
-so you should download the **Windows x86-64 executable installer**,
+very likely it is a 64-bit machine,
+so you should download the file labeled **Windows x86-64 executable installer**,
 and save it on your Download folder or on your Desktop:
 
 ![Python 3.6.0 downloads](imgs/030_downloaded.png)
 
-The download will take from few seconds to a few minutes,
+Downloading the file will take from few seconds to a few minutes,
 depending on the bandwidth of your Internet connection.
 
 (If you have an older PC that you know is a 32-bit computer,
-download the **Windows x86 executable installer** instead.)
+download the **Windows x86 executable installer** instead.
+You can tell whether your PC is a 32-bit or a 64-bit machine
+by reading the **System Information** in the **Windows Control Panel**.)
 
 ### Step 2: Install Python
 
@@ -137,14 +140,13 @@ to start the installation wizard:
 ![Python 3.6.0 installer](imgs/040_installer.png)
 
 By default, the **Add Python 3.6 to PATH** option is disabled,
-but **you should select it**, as it makes running Python programs
-much much easier.
+but **you should select it**,
+as it makes running Python programs much much easier.
 
 Most users should click the **Install Now** button,
-which installs Python with default settings.
-
+which installs Python with the default settings.
 (If you want to personalize your installation
-or you are told to enable some advanced feature,
+or you are told to enable some advanced features,
 click on the **Customize installation** option instead.)
 
 The installer might ask you for administrative privileges
@@ -158,37 +160,44 @@ A progress bar will appear:
 
 ![Python 3.6.0 installer progress bar](imgs/042_installer.png)
 
-until the installation completes, with the following message:
+until the installation completes with the following message:
 
 ![Python 3.6.0 installer completed](imgs/043_installer.png)
 
 Starting with Python 3.6.0,
-it is recommended to click on the **Disable path length limit**
-option, before closing the installer.
+it is recommended to click on
+the **Disable path length limit** option,
+before closing the installer.
 If you do so, you will get a final confirmation dialog:
 
 ![Python 3.6.0 installer completed](imgs/044_installer.png)
 
-You can finish the installation by clicking the **Close** button.
+You can terminate the installation by clicking the **Close** button.
 
-Congratulations, you have your first Python installation under your belt!
+Congratulations, you have **your first Python installation** under your belt!
 
 
 ## Using The Command Prompt
 
 Most Python programs are command line interface (CLI) utilities,
-which means that they do not show a graphical user interface (GUI),
+which means that they are not operated
+via a graphical user interface (GUI),
 also known as "the program window".
-Instead, they must be executed in the **Command Prompt** of Windows,
-also known as "shell" or "terminal",
-typing a command with a certain syntax.
-You can think of this as reciting the "right spell"
-to get your task computed.
+Instead, they must be executed
+in the **Command Prompt** of Windows,
+also known as "shell" or "terminal".
+
+Running a CLI program means
+**typing a command string on the Command Prompt of Windows**,
+following a certain syntax
+which depends on what the program is supposed to do.
+You can think of this act as reciting the "right spell"
+to get your job done.
 
 ### Opening A Command Prompt
 
 To open the Command Prompt,
-locate the Command Prompt icon in your Start menu,
+locate the Command Prompt icon in your Start menu
 (or use the search bar):
 
 ![Command Prompt icon](imgs/100_cp.png)
@@ -197,17 +206,22 @@ Click on the icon. A black window appears:
 
 ![Command Prompt window](imgs/101_cp.png)
 
-The first two lines show the version of the Command Prompt.
-The last line is the **prompt**, where you can actually type commands.
+The first two lines printed in the window
+show the version of the Command Prompt.
+The last line, which reads ``C:\Users\IEUser>`` in the screenshot above,
+is the **prompt**, where you can actually type commands.
 
-In particular, the prompt line always starts
+The prompt line always starts
 with the location of the **working directory**,
-that is, the folder where the command prompt is currently acting upon.
+that is, the folder where the command prompt is currently acting upon
+(``C:\Users\IEUser`` in the screenshot above),
+and ends with the ``>`` character.
 
 The prompt normally opens in the **home directory** of the current user:
-in the above example it is ``C:\Users\IEUser``,
+in fact, we are in ``C:\Users\IEUser``,
 because the user is called ``IEUser``.
-If your username is ``Olga``, it is likely you will see
+If your Windows username is ``Olga``,
+it is likely you will see
 ``C:\Users\Olga`` instead.
 
 (Different versions of Windows might have different paths for home directories.)
@@ -233,19 +247,20 @@ as if the documentation was as follows:
 C:\Users\IEUser> python my_awesome_program.py
 ```
 
-(where you actually type only ``python my_awesome_program.py``).
+(You will actually type only ``python my_awesome_program.py`` and
+hit the Enter/Return key.)
 
 ### The Three Safety Rules
 
 By issuing commands on the Command Prompt,
 you can **accidentally delete** your own files or **damage** Windows,
-so you must be careful.
+so you must **be careful**.
 
 Do not be afraid or discouraged:
 you do not stop using knives just because
 you can cut your fingers with them!
 
-By following **three Safety Rules**,
+By following **Three Safety Rules**,
 you can operate the prompt safely:
 
 1. Never issue a command without understanding what it does,
@@ -279,8 +294,9 @@ Notice that the prompt changed to ``C:\>``.
 
 ### Listing The Contents Of The Working Directory (``dir``)
 
-If you want a list of the contents of the current working directory,
-issue the ``dir`` command, without any arguments:
+If you want a list of the files or subdirectories
+contained in the current working directory,
+issue the ``dir`` command, without arguments:
 
 ![Command Prompt window](imgs/111_cp.png)
 
@@ -309,7 +325,8 @@ To check this, give the ``python --version`` command:
 
 ![Python non-interactive execution](imgs/120_python.png)
 
-The Python version will be printed (e.g., ``Python 3.6.0``)
+The Python version will be printed
+(e.g., ``Python 3.6.0``)
 and you will get back to the Windows prompt.
 You just ran Python in **non-interactive mode**,
 meaning that you provided a precise command
@@ -317,8 +334,7 @@ meaning that you provided a precise command
 the Python interpreter performed what you asked for,
 and then it returned control to the Command Prompt of Windows.
 
-The **non-interactive mode** is the mode which most Python programs
-you are interested in use.
+The **non-interactive mode** is how most Python programs work.
 
 If you forget to add the ``--version`` parameter
 after the ``python`` command,
@@ -358,7 +374,7 @@ This usually implies **downloading** either **a single Python source code** file
 and other resource files that you need to uncompress somewhere on your disk.
 
 The exact details depend on your Python program,
-be sure to **carefully read its install documentation**.
+hence be sure to **carefully read its install documentation**.
 You can download the prescribed files with your browser,
 and then copy/uncompress them using the Windows graphical file manager.
 
@@ -405,7 +421,7 @@ Clearly, **the semantics of the arguments vary from program to program**,
 depending on what each program is supposed to do.
 
 In our case, ``export-kobo.py`` will read the file
-whose name is passed as first parameter (``KoboReader.sqlite``)
+whose name is passed as the first parameter (``KoboReader.sqlite``)
 and it will list (``--list`` option) the titles of all the eBooks
 with annotations or highlights in the database.
 
@@ -424,8 +440,8 @@ the newly created file named ``exported.csv`` in CSV format:
 You must **check the documentation** of your Python program
 to know the semantics of its arguments.
 Most programs, when run without arguments
-(or with a single ``-h`` or ``--help`` argument)
-will print some help directly in the prompt window.
+(or with just a ``-h`` or ``--help`` argument after the program name)
+will print an help message in the prompt window.
 
 **Congratulations, now you should be able
 to download and run a Python program on your own!**
