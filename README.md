@@ -2,8 +2,8 @@
 
 A step-by-step guide on installing Python and using the Command Prompt for Windows
 
-* Version: 1.0.0
-* Date: 2017-01-01
+* Version: 1.1.0
+* Date: 2017-01-03
 * Author: [Alberto Pettarin](http://www.albertopettarin.it/) ([contact](http://www.albertopettarin.it/contact.html))
 * License: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/legalcode)
 
@@ -75,6 +75,12 @@ with a complete, real-life example.
 The preliminary step consists in installing
 the Python interpreter (i.e., the "master program")
 on your computer.
+
+**Installing Python is a one-time operation.**
+If you already installed Python in the past
+(for example, to run a different program),
+you do not need to install it again,
+and you can skip to the next section.
 
 ### Step 0: Should I Get Python 2 Or Python 3?
 
@@ -406,6 +412,24 @@ In our example, ``cd C:\export-kobo``:
 
 ![Running a Python program](imgs/130_example.png)
 
+A simpler alternative to using the ``cd`` command
+takes advantages of the Windows file explorer.
+Just navigate the file explorer to the folder
+where your Python code is:
+
+![Opening a prompt from file explorer](imgs/140_opendir.png)
+
+and select the
+``File > Open command prompt > Open command prompt``
+menu:
+
+![Opening a prompt from file explorer](imgs/141_opendir.png)
+
+you will get a new Command Prompt window,
+already located at the correct directory:
+
+![Opening a prompt from file explorer](imgs/142_opendir.png)
+
 ### Step 3: Run The Python Program
 
 At this point, we are ready to run our program.
@@ -439,9 +463,25 @@ the newly created file named ``exported.csv`` in CSV format:
 
 You must **check the documentation** of your Python program
 to know the semantics of its arguments.
-Most programs, when run without arguments
-(or with just a ``-h`` or ``--help`` argument after the program name)
-will print an help message in the prompt window.
+
+Usually, if you run a Python program without arguments
+you will get a synopsis of the accepted arguments:
+
+![Running without arguments shows the synopsis](imgs/150_help.png)
+
+If a ``-h`` or ``--help`` argument is given,
+then a more verbose help message will be printed:
+
+![Running with -h shows an help message](imgs/151_help.png)
+
+
+
 
 **Congratulations, now you should be able
 to download and run a Python program on your own!**
+
+
+## Acknowledgments
+
+* **Louise Schofield nee Stokes** for suggesting using the file explorer menu
+  to open the command prompt at a given directory
